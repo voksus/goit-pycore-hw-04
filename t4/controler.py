@@ -61,8 +61,8 @@ def add_contact(args:list):
         v.lines +=1
     else:
         warn(f"Для внесення даних про особу команда {v.higlight_cmd('add')} повинна мати два параметри: " +\
-                  f"{v.person('<ім\'я>')} та {v.phone('<номер>')}\n" +\
-                  f"Наприклад: {v.view('add Volodymyr +380671234567', '3')}")
+             f"{v.person('<ім\'я>')} та {v.phone('<номер>')}\n" +\
+             f"Наприклад: {v.view('add Volodymyr +380671234567', '3')}")
 
 def change_contact(args:list):
     if len(args) == 2:
@@ -144,8 +144,6 @@ def help():
     # ?
     s = f"{v.higlight_cmd('?')}                    "
     print(f"{s} - викликає цю справку.")
-
-    # print(v.view("Важливо зазначити? що на поточний момент немає перевірки на коректність чи логічність введених даних до списку контактів.", '-5'))
 
 def warn(s:str, end=None):
     v.prn(v.view(" !!! ", '0b') + ' ' + s, end=end)

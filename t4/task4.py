@@ -35,8 +35,5 @@ def parse_input(cmd:str) -> tuple[str, list]:
     cmd = cmd.split()
     return cmd[0].lower(), [] if len(cmd) == 1 else cmd[1:]
 
-def add_contact():
-    pass
-
 if __name__ == "__main__":
     main()
